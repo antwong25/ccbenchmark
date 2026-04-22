@@ -11,7 +11,7 @@ wget https://dl-cdn.alpinelinux.org/alpine/v3.21/releases/x86_64/alpine-virt-3.2
 qemu-img create -f qcow2 alpine_vm.qcow2 10G
 
 qemu-system-x86_64 \
-  -m 1024 \
+  -m 2048 \
   -smp 2 \
   -machine accel=tcg \
   -hda alpine_vm.qcow2 \
@@ -28,7 +28,7 @@ reboot
 
 
 qemu-system-x86_64 \
-  -m 1024 \
+  -m 2048 \
   -smp 2 \
   -machine accel=tcg \
   -hda alpine_vm.qcow2 \
